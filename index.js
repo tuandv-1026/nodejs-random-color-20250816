@@ -6,20 +6,14 @@ const app = express();
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD
-// Add a GET method for /learning route
-=======
 // Add a GET method for /index route
->>>>>>> refs/remotes/origin/master
+
 app.get('/', (req, res) => {
     res.redirect('/index.html');
 });
 
 // Add a GET method for /learning route
 app.get('/learning', (req, res) => {
-<<<<<<< HEAD
-    res.redirect('/learning.html');
-=======
     res.sendFile(path.join(__dirname, 'public/learning.html'));
     
 });
@@ -32,7 +26,6 @@ app.get('/service-a', (req, res) => {
 // Add a GET method for /service-b path
 app.get('/service-b', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/service_b.html'));
->>>>>>> refs/remotes/origin/master
 });
 
 // Generate a random color
